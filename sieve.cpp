@@ -19,16 +19,11 @@ vector<ll> sieve(ll n) {
 }
 
 void solve(){
-    int n;
-    cin >> n;
-    vector<ll> primes = sieve(n);
-    for (ll p: primes) cout << p << ' ';
-    cout << '\n';
 }
 
 int main() {
-    int t;
-    cin >> t;
+    int t = 1;
+    //cin >> t;
     while (t--) solve();
     return 0;
 }
