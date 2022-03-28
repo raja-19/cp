@@ -6,6 +6,7 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 
 ll mpow(ll a, ll b) {
+    a %= MOD;
     ll res = 1;
     while (b) {
         if (b & 1) res = (res * a) % MOD;
@@ -22,13 +23,12 @@ ll minv(ll a) {
 class NCK {
 public:
    vector<ll> f; 
-
    NCK(ll n): f(n + 1) {
        f[0] = 1;
        for (ll i = 1; i <= n; i++) {
            f[i] = (f[i - 1] * i) % MOD;
        }
-  }
+   }
    ll operator()(ll n, ll k) {
        if (k < 0 || n < k) return 0;
        return ((f[n] * minv(f[n - k]) % MOD) * minv(f[k])) % MOD; 
