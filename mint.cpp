@@ -6,6 +6,7 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 
 ll mpow(ll a, ll b) {
+    a %= MOD;
     ll res = 1;
     while (b) {
         if (b & 1) res = (res * a) % MOD;
@@ -103,4 +104,3 @@ int main() {
     while (t--) solve();
     return 0;
 }
-
