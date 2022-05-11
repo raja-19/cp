@@ -24,6 +24,7 @@ public:
         n = size;
         tree.assign(4 * n, op.defval);
     }
+    
     SegmentTree(const vector<ll>& a) {
         n = (int)a.size();
         tree.assign(4 * a.size(), op.defval);
